@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<!-- Setting website pre rec -->
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <title> Zesty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<!-- The navigation bar  -->
+<body>
+    <div>
+        <nav>
+            <div class="heading">
+                <li><a href="/"> <h4>Zestea</h4> </a>
+            </div>
+         
+            <ul class="nav_links" >
+
+                {{ logsin | safe }}
+            </ul>
+            
+            
+        
+          
+           
+        </nav>
+
+    </div>
+
+    <div>
+        <button></button>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<!-- Setting website pre rec -->
+<head>
+    <meta charset="utf-8">
+    <title> Zesty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+
+
+<body>
+
+
+    <!-- The navigation bar  -->
+    <div>
+        <nav>
+            <div class="heading">
+                <li><a href="/"> <h4>Zestea</h4> </a>
+            </div>
+         
+            <ul class="nav_links" >
+
+                {{ logsin | safe }}
+            </ul>
+        </nav>
+    </div>
+
+
+    <div>
+
+        <div class="load-head">
+            <p> Your sequence is being analyzed this process may take while so go take a break </p>
+            <p>Task ID : {{GA}}</p>
+            <span class="scounter" id="scounter" max = "0">Elapsed Time 0:00</span>
+
+
+        </div>
+        
+    </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+
+    <script type="application/javascript">
+        const timerE = document.getElementById("scounter");
+        let timerV = 0
+        let timerM= 0
+        
+        const interval = setInterval(() => {
+
+            timerV = timerV + 1;
+
+            if (timerV == 60) {
+                timerV = 0
+                timerM = timerM + 1 
+            }
+
+            if (timerV < 10) {
+                timerE.innerText = "Elapsed Time " + timerM + ":0" + timerV
+            }
+            else{
+                timerE.innerText = "Elapsed Time " + timerM + ":" + timerV 
+            }
+
+        }, 1000)
+
+
+    </script>
+
+
+</body>
+
+</html>

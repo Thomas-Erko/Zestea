@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<!-- Setting website pre rec -->
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <title> Zesty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<!-- The navigation bar  -->
+<body>
+    <div>
+        <nav>
+            <div class="heading">
+                <li><a href="/"> <h4>Zestea</h4> </a>
+            </div>
+         
+            <ul class="nav_links" >
+
+                {{ logsin | safe }}
+            </ul>
+            
+            
+        
+          
+           
+        </nav>
+
+    </div>
+
+
+    <!-- Input box and Body text -->
+    <div>
+        <div class="input_main">
+            <div class="mbody">
+                <body>
+                    Please enter your SRA accension # in the text box or upload
+                    your file in fastq format
+                </body>
+            </div>
+            <form action="/" onsubmit="return dothis" method="post">
+                <div class="inp_label">
+                    <textarea id="p1_text" name="main1" rows="2" cols="40" ></textarea>
+                    <br>
+                    <input id="p1_input" type="file" />
+                    <br><br><br>
+
+                    <input type="radio" name="input_method" id="txt_entry" value="Accension #">
+                    <label for="txt_entry">Accension #</label>
+                
+                    <input type="radio" name="input_method" id="file_entry" value="File">
+                    <label for="file_entry">File</label>
+
+                    <br><br><br>
+                    <input type="submit" name="submit" id="sub1"/>
+                
+                </div>
+
+            </form>
+        </div>
+        <br>
+        <br>
+        <hr>
+    </div>
+
+    <!-- Input settings -->
+    <div>
+        <div class="mbody">
+            Analysis Paramaters
+        </div>
+        <div class="analy_params">
+            <div>
+                <label for="stoper">Choose input preferance: </label>
+                <select name="stoper" id="stoper">
+                    <option value="un">Select</option>
+                    <option value="all_steps">Every Step</option>
+                    <option value="fastqc_only">FastQC Only</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    
+    
+
+    <script>
+
+        function ldis() {
+
+
+            const loaderContainer = document.querySelector('.loader-wrapper');
+            window.addEventListener('load', () => {
+                loaderContainer.style.display = 'none';
+            });
+
+        }
+        ldis()
+
+
+        function dothis(){
+            const loaderContainer = document.querySelector('.loader-wrapper');
+            introbox = document.getElementById('p1_text');
+            if (introbox != null){
+                return loaderContainer.style.display = 'flex';
+            }
+
+        }
+       
+
+    </script>
+
+
+</body>
+</html>

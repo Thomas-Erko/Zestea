@@ -1,0 +1,227 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* ============ General ===================*/
+
+.mbody {
+  color: black;
+  font-family: Garamond, serif;
+  font-size: large;
+  text-align: center;
+  margin: auto;
+  padding: 14px 16px;
+}
+
+hr  
+{  
+width: 90%;  
+height: 5px;  
+margin-bottom: 7px;  
+margin-right: auto;  
+margin-left: auto;  
+margin-top: 9px;  
+border-width: 0px;  
+border-color: black;  
+background-color: rgb(76, 15, 100);
+}  
+
+button {
+  background-color: rgb(76, 15, 100);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: medium;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#sub1 {
+  background-color: rgb(76, 15, 100);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: medium;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.correction{
+  color: rgb(221, 122, 122);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* loading page info */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:92%;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  bottom: 0 ;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+.load_text{
+  color: white;
+  font-family: Garamond, serif;
+  font-size: large;
+  bottom: 70%;
+  left: 50%;
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+.load-head {
+  color: white;
+  font-family: Garamond, serif;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  padding: 14px 16px;
+  background-color: #242f3f;
+  
+
+}
+
+/* loading page info */
+
+/* ============ Headding setup ===================*/
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(76, 15, 100);
+}
+
+.nav_links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  list-style: none;
+}
+
+.nav_links a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 14px 16px;
+}
+
+.nav_links li a:hover:not(.active){
+  background-color: lightslategray;
+}
+
+.heading{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+}
+
+.heading a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 14px 16px;
+}
+
+/* ============ Input setup ===================*/
+
+.input_main{
+  color: black;
+  /*background-color: lightgray;*/
+}
+
+
+.inp_label{
+  text-align: center;
+  margin: auto;
+}
+
+.analy_params{
+  color: black;
+  font-family: Garamond, serif;
+  font-size: small;
+  text-align: auto;
+  margin: auto;
+  padding: 14px 16px;
+}
+
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+
+#hbut{
+  visibility: hidden;
+}
